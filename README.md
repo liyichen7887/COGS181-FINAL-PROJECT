@@ -11,6 +11,7 @@ We are here to present a investigation of influences of different meta-architect
 
 After the analysis, the major findings are: the precision depends largely on how deep (big) the feature extractor is; decreasing size of input image would increase the speed of Faster R-CNN but with a decreasing precision; decreasing number of object proposals would increase the speed of Faster R-CNN, with little effect on the precision.
 
+
 Setup:
 =======================================================
 
@@ -20,27 +21,35 @@ Here are some details of the test of three different meta- architecture:
 3. SSD: We used pretrained VOC07+12+COCO trainval, SSD-300 VGG-based model, and tested on voc2007 dataset.
 
 The initial hyper parameter for each meta-architecture:
-Faster R-CNN
-– Batch size: 1
-– RPN batch size: 256
-– Number of regional proposal: 300 – Image rescale: 600*1000
-– Test NMS threshold: 0.3
-Yolo
-– Batch size: 64
-– Threshold: 0.5 SSD
-– Batch size: 1
-– Nms threshold: 0.45
-– Matching threshold: 0.5
-SSD
-– Batch size: 1
-– Nms threshold: 0.45
-– Matching threshold: 0.5
+
+Faster R-CNN:
+
+Batch size: 1
+RPN batch size: 256
+Number of regional proposal: 300
+Image rescale: 600*1000
+Test NMS threshold: 0.3
+
+Yolo:
+
+Batch size: 64
+Threshold: 0.5 SSD
+Batch size: 1
+Nms threshold: 0.45
+Matching threshold: 0.5
+
+SSD:
+
+Batch size: 1
+Nms threshold: 0.45
+Matching threshold: 0.5
 
 
 Report:
 =======================================================
 
 For more details of implementation and evaluation, please refer to COGS181_YichenLi.pdf
+
 
 Codes & References:
 =======================================================
